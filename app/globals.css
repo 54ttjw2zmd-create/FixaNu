@@ -1,3 +1,27 @@
+@font-face {
+  font-family: CabinetGroteskExtrabold;
+  src: url('/CabinetGrotesk-Extrabold.woff2') format('woff2');
+}
+
+.cabinet-extrabold {
+  font-family: CabinetGroteskExtrabold, sans-serif;
+}
+@font-face {
+  font-family: CabinetGroteskMedium;
+  src: url('/CabinetGrotesk-Medium.woff2') format('woff2');
+}
+
+.cabinet-medium {
+  font-family: CabinetGroteskMedium, sans-serif;
+}
+@font-face {
+  font-family: CabinetGrotesk;
+  src: url('/CabinetGrotesk-Black.woff2') format('woff2');
+}
+
+.cabinet-font {
+  font-family: CabinetGrotesk, sans-serif;
+}
 @import "tailwindcss";
 
 :root {

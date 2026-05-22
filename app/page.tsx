@@ -1,65 +1,59 @@
-import Image from "next/image";
-
-export default function Home() {
+export default function Page() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
+    <main className="h-screen bg-gradient-to-b from-[#F4FBF7] via-[#FFFFFF] to-[#EEF8F1] text-[#0B2341] flex flex-col items-center justify-center px-6 overflow-hidden relative">
+      <div className="absolute top-0 left-0 w-full h-[500px] bg-emerald-300/20 blur-3xl pointer-events-none" />
+<br />
+<br />
+<br />
+<br />
+      <div className="relative max-w-5xl w-full text-center z-10 flex flex-col justify-center h-screen">
+        <p className="text-sm uppercase tracking-widest text-[#3ED65C] mb-4 font-semibold">
+          Kommande tjänst
+        </p>
+
+        <h1 className="cabinet-font text-5xl md:text-7xl font-black leading-[1.02] tracking-[-0.02em] [text-shadow:0_1px_1px_rgba(0,0,0,0.08)] mb-6 text-[#0B2341]">
+          Få hjälp med vardagssaker 
+          <br />
+          snabbare och enklare
+        </h1>
+
+        <p className="cabinet-medium text-lg md:text-xl text-slate-600 leading-relaxed mb-12 max-w-3xl mx-auto">
+          Hjälp med vardagsproblem — direkt från människor i närheten.
+        </p>
+
+        <div className="bg-white rounded-[32px] p-8 border border-emerald-100 shadow-[0_10px_40px_rgba(0,0,0,0.08)] max-w-2xl mx-auto">
+        <h2 className="cabinet-extrabold text-2xl tracking-[-0.02em] mb-4 text-[#0B2341]">
+          Få tidig tillgång
+        </h2>
+
+          <p className="cabinet-medium text-slate-600 mb-6 leading-relaxed">
+            Lämna din mail för att få uppdateringar och möjlighet att testa tjänsten tidigt.
           </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
+
+          <form className="flex flex-col sm:flex-row gap-4">
+            <input
+              type="email"
+              placeholder="Din e-postadress"
+              className="cabinet-medium flex-1 rounded-2xl bg-[#F8FAFC] border border-slate-200 px-5 py-4 text-[#0B2341] placeholder:text-slate-400 outline-none focus:ring-2 focus:ring-emerald-400"
             />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+
+            <button
+              type="submit"
+              className="cabinet-extrabold rounded-2xl bg-gradient-to-r from-[#0B4F8A] to-[#3ED65C] text-white px-8 py-4 tracking-[-0.01em] hover:scale-[1.02] hover:opacity-95 transition duration-300 shadow-lg"
+            >
+              Få uppdateringar
+            </button>
+          </form>
         </div>
-      </main>
-    </div>
+
+        <div className="flex justify-center mt-1 opacity-100">
+          <img
+            src="/logo.png"
+            alt="FixaNu"
+            className="w-full max-w-xs object-contain"
+          />
+        </div>
+      </div>
+    </main>
   );
 }
