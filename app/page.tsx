@@ -30,10 +30,19 @@ export default function Page() {
           </p>
 
        <form
+  noValidate
   onSubmit={async (e) => {
     e.preventDefault();
 
-    const formData = new FormData(e.currentTarget);
+    const form = e.currentTarget;
+    const emailInput = form.email as HTMLInputElement;
+
+    if (!emailInput.value.includes("@")) {
+      alert("Fyll i en giltig emailadress");
+      return;
+    }
+
+    const formData = new FormData(form);
 
     const response = await fetch(
       "https://formspree.io/f/mnjrvnwa",
