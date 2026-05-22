@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "FixaNu",
+  title: "FixaNu — Små problem kan vara enkla att fixa",
   description: "Få hjälp från människor i närheten — snabbt, enkelt och tryggt.",
 };
 
