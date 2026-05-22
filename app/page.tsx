@@ -30,19 +30,10 @@ export default function Page() {
           </p>
 
       <form
-  noValidate
   onSubmit={async (e) => {
     e.preventDefault();
 
-    const form = e.currentTarget;
-    const emailInput = form.email as HTMLInputElement;
-
-    if (!emailInput.value.includes("@")) {
-      alert("Fyll i en giltig emailadress");
-      return;
-    }
-
-    const formData = new FormData(form);
+    const formData = new FormData(e.currentTarget);
 
     const response = await fetch(
       "https://formspree.io/f/mnjrvnwa",
@@ -65,16 +56,8 @@ export default function Page() {
     type="email"
     name="email"
     placeholder="Din e-postadress"
-    required
-    onInvalid={(e) => {
-      e.currentTarget.setCustomValidity(
-        "Fyll i en giltig emailadress"
-      );
-    }}
-    onInput={(e) => {
-      e.currentTarget.setCustomValidity("");
-    }}
     className="cabinet-medium flex-1 rounded-2xl bg-[#F8FAFC] border border-slate-200 px-5 py-4 text-[#0B2341] placeholder:text-slate-400 outline-none focus:ring-2 focus:ring-emerald-400"
+    required
   />
 
   <button
