@@ -2,7 +2,10 @@ export default function Page() {
   return (
     <main className="min-h-screen bg-gradient-to-b from-[#F4FBF7] via-[#FFFFFF] to-[#EEF8F1] text-[#0B2341] flex flex-col items-center justify-center px-6 py-8 md:py-0 overflow-hidden relative">
       <div className="absolute top-0 left-0 w-full h-[500px] bg-emerald-300/20 blur-3xl pointer-events-none" />
-
+<br />
+<br />
+<br />
+<br />
       <div className="relative max-w-5xl w-full text-center z-10 flex flex-col justify-center h-screen">
         <p className="text-sm uppercase tracking-widest text-[#3ED65C] mb-4 font-semibold">
           Kommande tjänst
