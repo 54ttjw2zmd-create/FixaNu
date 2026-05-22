@@ -28,12 +28,24 @@ export default function Page() {
           </p>
 
           <form
-  action="https://formspree.io/f/mnjrvnwa"
-  method="POST"
-  onSubmit={() => {
-    setTimeout(() => {
-      window.location.href = "/thank-you";
-    }, 500);
+  onSubmit={async (e) => {
+    e.preventDefault();
+
+    const formData = new FormData();
+    formData.append(
+      "email",
+      (e.currentTarget.email as HTMLInputElement).value
+    );
+
+    await fetch("https://formspree.io/f/mnjrvnwa", {
+      method: "POST",
+      body: formData,
+      headers: {
+        Accept: "application/json",
+      },
+    });
+
+    window.location.href = "/thank-you";
   }}
   className="flex flex-col sm:flex-row gap-4"
 >
@@ -42,6 +54,7 @@ export default function Page() {
     name="email"
     placeholder="Din e-postadress"
     className="cabinet-medium flex-1 rounded-2xl bg-[#F8FAFC] border border-slate-200 px-5 py-4 text-[#0B2341] placeholder:text-slate-400 outline-none focus:ring-2 focus:ring-emerald-400"
+    required
   />
 
   <button
