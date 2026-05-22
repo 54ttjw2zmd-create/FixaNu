@@ -4,20 +4,17 @@ export default function Page() {
       <div className="absolute top-0 left-0 w-full h-[500px] bg-emerald-300/20 blur-3xl pointer-events-none" />
 <br />
 <br />
-<br />
       <div className="relative max-w-5xl w-full text-center z-10 flex flex-col justify-center h-screen">
         <p className="text-sm uppercase tracking-widest text-[#3ED65C] mb-4 font-semibold">
           Kommande tjänst
         </p>
 
         <h1 className="cabinet-font text-5xl md:text-7xl font-black leading-[1.02] tracking-[-0.02em] [text-shadow:0_1px_1px_rgba(0,0,0,0.08)] mb-6 text-[#0B2341]">
-          Få hjälp med vardagssaker 
-          <br />
-          snabbare och enklare
+          Små problem i vardagen borde vara enklare att lösa.
         </h1>
 
         <p className="cabinet-medium text-lg md:text-xl text-slate-600 leading-relaxed mb-12 max-w-3xl mx-auto">
-          Hjälp med vardagsproblem — direkt från människor i närheten.
+          Få hjälp från människor i närheten — snabbt, enkelt och tryggt.
         </p>
 
         <div className="bg-white rounded-[32px] p-8 border border-emerald-100 shadow-[0_10px_40px_rgba(0,0,0,0.08)] max-w-2xl mx-auto">
