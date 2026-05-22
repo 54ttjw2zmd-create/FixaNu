@@ -27,30 +27,22 @@ export default function Page() {
             Lämna din mail för att få uppdateringar och möjlighet att testa tjänsten tidigt.
           </p>
 
-         <form
-  onSubmit={async (e) => {
-    e.preventDefault();
-
-    const form = e.currentTarget;
-    const emailInput = form.querySelector(
-      'input[name="email"]'
-    ) as HTMLInputElement;
-
-    const formData = new FormData();
-    formData.append("email", emailInput.value);
-
-    await fetch("https://formspree.io/f/mnjrvnwa", {
-      method: "POST",
-      body: formData,
-      headers: {
-        Accept: "application/json",
-      },
-    });
-
-    window.location.href = "/thank-you";
+        <form
+  action="https://formspree.io/f/mnjrvnwa"
+  method="POST"
+  target="hidden_iframe"
+  onSubmit={() => {
+    setTimeout(() => {
+      window.location.href = "/thank-you";
+    }, 500);
   }}
   className="flex flex-col sm:flex-row gap-4"
 >
+  <iframe
+    name="hidden_iframe"
+    style={{ display: "none" }}
+  />
+
   <input
     type="email"
     name="email"
