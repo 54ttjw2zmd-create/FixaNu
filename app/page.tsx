@@ -35,6 +35,13 @@ export default function Page() {
     e.preventDefault();
 
     const form = e.currentTarget;
+    const emailInput = form.email as HTMLInputElement;
+
+    if (!emailInput.value.includes("@")) {
+      alert("Fyll i en giltig emailadress");
+      return;
+    }
+
     const formData = new FormData(form);
 
     const response = await fetch(
@@ -55,20 +62,12 @@ export default function Page() {
   className="flex flex-col sm:flex-row gap-4"
 >
   <input
-    type="email"
-    name="email"
-    placeholder="Din e-postadress"
-    required
-    onInvalid={(e) => {
-      e.currentTarget.setCustomValidity(
-        "Fyll i en giltig emailadress"
-      );
-    }}
-    onInput={(e) => {
-      e.currentTarget.setCustomValidity("");
-    }}
-    className="cabinet-medium flex-1 rounded-2xl bg-[#F8FAFC] border border-slate-200 px-5 py-4 text-[#0B2341] placeholder:text-slate-400 outline-none focus:ring-2 focus:ring-emerald-400"
-  />
+  type="email"
+  name="email"
+  placeholder="Din e-postadress"
+  className="cabinet-medium flex-1 rounded-2xl bg-[#F8FAFC] border border-slate-200 px-5 py-4 text-[#0B2341] placeholder:text-slate-400 outline-none focus:ring-2 focus:ring-emerald-400 invalid:border-emerald-500"
+  required
+/>
 
   <button
     type="submit"
@@ -87,6 +86,6 @@ export default function Page() {
           />
         </div>
       </div>
-       </main>
+    </main>
   );
 }
