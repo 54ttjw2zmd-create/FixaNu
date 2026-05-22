@@ -4,6 +4,7 @@ export default function Page() {
       <div className="absolute top-0 left-0 w-full h-[500px] bg-emerald-300/20 blur-3xl pointer-events-none" />
 <br />
 <br />
+<br />
       <div className="relative max-w-5xl w-full text-center z-10 flex flex-col justify-center h-screen">
         <p className="text-sm uppercase tracking-widest text-[#3ED65C] mb-4 font-semibold">
           Kommande tjänst
