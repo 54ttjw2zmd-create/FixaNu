@@ -28,14 +28,14 @@ export default function Page() {
           </p>
 
           <form
-            action="https://formspree.io/f/mnjrvnwa"
-            method="POST"
-            className="flex flex-col sm:flex-row gap-4"
+  action="https://formspree.io/f/mnjrvnwa"
+  method="POST"
+  className="flex flex-col sm:flex-row gap-4"
 >
-           <input
-            type="hidden"
-            name="_next"
-            value="https://fixanu.nu/thank-you"
+  <input
+    type="hidden"
+    name="_next"
+    value="https://fixanu.nu/thank-you"
   />
 
   <input
