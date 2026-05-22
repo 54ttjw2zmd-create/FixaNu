@@ -46,7 +46,7 @@ export default function Page() {
           </form>
         </div>
 
-        <div className="flex justify-center mt-1 opacity-100">
+        <div className="flex justify-center mt-0 opacity-100">
           <img
             src="/logo.png"
             alt="FixaNu"
