@@ -34,7 +34,7 @@ export default function Page() {
 >
   <input
     type="hidden"
-    name="_next"
+    name="_redirect"
     value="https://fixanu.nu/thank-you"
   />
 
