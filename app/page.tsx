@@ -12,8 +12,7 @@ export default function Page() {
         </p>
 
         <h1 className="cabinet-font text-5xl md:text-7xl font-black leading-[1.02] tracking-[-0.02em] [text-shadow:0_1px_1px_rgba(0,0,0,0.08)] mb-6 text-[#0B2341]">
-          Små problem i vardagen, 
-          <br />
+          Små problem i vardagen <br />
           kan vara enkla att fixa
         </h1>
 
