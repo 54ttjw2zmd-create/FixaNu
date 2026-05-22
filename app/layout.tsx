@@ -25,27 +25,29 @@ export default function RootLayout({
 }>) {
   return (
     <html
-      lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
-    >
-      <body className="min-h-full flex flex-col">
-        {children}
-        
-      <Script
+  lang="en"
+  className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+>
+  <head>
+     <body className="min-h-full flex flex-col">
+       {children}
+<script
   async
   src="https://www.googletagmanager.com/gtag/js?id=G-J6Y5R4PPWG"
-  strategy="afterInteractive"
 />
 
-<Script id="google-analytics" strategy="afterInteractive">
-  {`
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
+<script
+  dangerouslySetInnerHTML={{
+    __html: `
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-J6Y5R4PPWG');
+    `,
+  }}
+/>
+</head>
 
-    gtag('config', 'G-J6Y5R4PPWG');
-  `}
-</Script>
 </body>
     </html>
   );
