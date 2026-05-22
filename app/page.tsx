@@ -30,14 +30,13 @@ export default function Page() {
           <form
   action="https://formspree.io/f/mnjrvnwa"
   method="POST"
+  onSubmit={() => {
+    setTimeout(() => {
+      window.location.href = "/thank-you";
+    }, 500);
+  }}
   className="flex flex-col sm:flex-row gap-4"
 >
-  <input
-    type="hidden"
-    name="_redirect"
-    value="https://fixanu.nu/thank-you"
-  />
-
   <input
     type="email"
     name="email"
@@ -45,13 +44,13 @@ export default function Page() {
     className="cabinet-medium flex-1 rounded-2xl bg-[#F8FAFC] border border-slate-200 px-5 py-4 text-[#0B2341] placeholder:text-slate-400 outline-none focus:ring-2 focus:ring-emerald-400"
   />
 
-            <button
-              type="submit"
-              className="cabinet-extrabold rounded-2xl bg-gradient-to-r from-[#0B4F8A] to-[#3ED65C] text-white px-8 py-4 tracking-[-0.01em] hover:scale-[1.02] hover:opacity-95 transition duration-300 shadow-lg"
-            >
-              Få uppdateringar
-            </button>
-          </form>
+  <button
+    type="submit"
+    className="cabinet-extrabold rounded-2xl bg-gradient-to-r from-[#0B4F8A] to-[#3ED65C] text-white px-8 py-4 tracking-[-0.01em] hover:scale-[1.02] hover:opacity-95 transition duration-300 shadow-lg"
+  >
+    Få uppdateringar
+  </button>
+</form>
         </div>
 
         <div className="flex justify-center mt-0 opacity-100">
